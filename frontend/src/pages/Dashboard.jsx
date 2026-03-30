@@ -89,6 +89,7 @@ export default function Dashboard({ userId }) {
         <div className="card" style={{ borderLeft: '4px solid var(--loss)' }}>
           <h3>COVID Crash (2020)</h3>
           <p>Experience the extreme volatility of the February 2020 market crash.</p>
+          <p style={{ fontSize: '12px', color: '#9CA3AF' }}>Note: May require paid Finnhub tier</p>
           <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
             <button className="btn btn-outline" onClick={() => startScenario('COVID', 'AAPL')}>AAPL</button>
             <button className="btn btn-outline" onClick={() => startScenario('COVID', 'TSLA')}>TSLA</button>
@@ -97,9 +98,32 @@ export default function Dashboard({ userId }) {
         <div className="card" style={{ borderLeft: '4px solid var(--profit)' }}>
           <h3>Bull Run (2021)</h3>
           <p>Learn to ride the trend during the massive 2021 tech bull run.</p>
+          <p style={{ fontSize: '12px', color: '#9CA3AF' }}>Note: May require paid Finnhub tier</p>
           <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
             <button className="btn btn-outline" onClick={() => startScenario('BULL', 'MSFT')}>MSFT</button>
             <button className="btn btn-outline" onClick={() => startScenario('BULL', 'NVDA')}>NVDA</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 style={{ marginTop: '32px', marginBottom: '16px' }}>Recent Scenarios (Free Tier)</h2>
+      <div className="grid-2">
+        <div className="card" style={{ borderLeft: '4px solid var(--primary)' }}>
+          <h3>2023 Bull Run</h3>
+          <p>Post-pandemic recovery and AI boom. Best for free tier users.</p>
+          <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_BULL', 'AAPL')}>AAPL</button>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_BULL', 'MSFT')}>MSFT</button>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_BULL', 'NVDA')}>NVDA</button>
+          </div>
+        </div>
+        <div className="card" style={{ borderLeft: '4px solid var(--primary)' }}>
+          <h3>2024 Market</h3>
+          <p>Most recent data available. Full year coverage.</p>
+          <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_2024', 'AAPL')}>AAPL</button>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_2024', 'GOOGL')}>GOOGL</button>
+            <button className="btn btn-outline" onClick={() => startScenario('RECENT_2024', 'AMZN')}>AMZN</button>
           </div>
         </div>
       </div>
